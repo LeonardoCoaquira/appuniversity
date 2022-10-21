@@ -1,6 +1,6 @@
 <?php 
 $contrasena = "Jg2JP9n3XpUdHJ";
-$usuario = "docentetecsup";
+$usuario = "grupo8";
 $nombre_bd = "docente";
 
 try {
