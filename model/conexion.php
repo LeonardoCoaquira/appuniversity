@@ -1,7 +1,7 @@
 <?php 
 $contrasena = "Jg2JP9n3XpUdHJ";
-$usuario = "grupo8";
-$nombre_bd = "crud";
+$usuario = "docentetecsup";
+$nombre_bd = "docente";
 
 try {
 	$bd = new PDO (
