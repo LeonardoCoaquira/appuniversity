@@ -1,93 +1,56 @@
-<?php include 'template/header.php' ?>
-
 <?php
-include_once "model/conexion.php";
-$sentencia = $bd->query("select * from persona");
-$persona = $sentencia->fetchAll(PDO::FETCH_OBJ);
-//print_r($persona);
+session_start();
+
+header('Content-Type: text/html; charset=UTF-8');
+
+include_once 'modules/conexion.php';
+include_once 'modules/cookie.php';
+
+
+if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
+	header('Location: home');
+	exit();
+}
 ?>
+<!DOCTYPE html>
+<html lang="es">
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-7">
-            <?php include 'mensajes/mensajes.php' ?>
-            <div class="card">
-                <div class="card-header">
-                    Lista de personas
-                </div>
-                <div class="col-12">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nombres</th>
-                                <th scope="col">Apellido Paterno</th>
-                                <th scope="col">Apellido Materno</th>
-                                <th scope="col">F.Nacimiento</th>
-                                <th scope="col">Celular</th>
-                                <th scope="col" colspan="2">Opciones</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            foreach ($persona as $dato) {
-                            ?>
-                                <tr>
-                                    <td scope="row"><?php echo $dato->id; ?></td>
-                                    <td><?php echo $dato->nombres; ?></td>
-                                    <td><?php echo $dato->apellido_paterno; ?></td>
-                                    <td><?php echo $dato->apellido_materno; ?></td>
-                                    <td><?php echo $dato->fecha_nacimiento; ?></td>
-                                    <td><?php echo $dato->celular; ?></td>
-                                    <td><a class="text-success" href="editar.php?codigo=<?php echo $dato->id; ?>"><i class="bi bi-pencil-square"></i></a></td>
-                                    <td><a class="text-primary" href="agregarPromocion.php?codigo=<?php echo $dato->id; ?>"><i class="bi bi-cursor"></i></a></td>
-                                    <td><a onclick="return confirm('Estas seguro de eliminar?');" class="text-danger" href="eliminar.php?codigo=<?php echo $dato->id; ?>"><i class="bi bi-trash"></i></a></td>
-                                </tr>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+	<meta name="google" value="notranslate">
+	<link rel="icon" type="image/png" href="/images/icon.png" />
+	<title>Sistema Escolar</title>
+	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
+	<meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal, Gestión de Asistencias" />
+	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
+	<link rel="stylesheet" href="css/pretty-checkbox.css" media="screen, projection" type="text/css" />
+	<script src="/js/external/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/external/prefixfree.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(window).load(function() {
+			$(".loader").fadeOut("slow");
+		});
+	</script>
+</head>
 
-                            <?php
-                            }
-                            ?>
+<body class="login">
+	<div class="loader"></div>
+	<div class="wrap-title-login">
+		<div class="title-login">
+			<h1>Sistema Escolar</h1>
+		</div>
+	</div>
+	<div class="form-login">
+		<div class="logo-form-login">
+		</div>
+		<form name="form-login" action="" method="POST" autocapitalize="off" data-nosnippet>
+			<?php
+			include_once 'modules/login/logger.php';
+			?>
+		</form>
+	</div>
+</body>
+<script src="/js/controls/buttons.js" type="text/javascript"></script>
 
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">
-                    Ingresar datos:
-                </div>
-                <form class="p-4" method="POST" action="registrar.php">
-                    <div class="mb-3">
-                        <label class="form-label">Nombres: </label>
-                        <input type="text" class="form-control" name="txtNombres" autofocus required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Apellido Paterno: </label>
-                        <input type="text" class="form-control" name="txtApPaterno" autofocus required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Apellido Materno: </label>
-                        <input type="text"" class=" form-control" name="txtApMaterno" autofocus required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Fecha de Nacimiento: </label>
-                        <input type="date" class="form-control" name="txtFechaNacimiento" autofocus required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Celular: </label>
-                        <input type="number" class="form-control" name="txtCelular" autofocus required>
-                    </div>
-                    <div class="d-grid">
-                        <input type="hidden" name="oculto" value="1">
-                        <input type="submit" class="btn btn-primary" value="Registrar">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<?php include 'template/footer.php' ?>
+</html>
