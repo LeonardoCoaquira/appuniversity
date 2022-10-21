@@ -20,8 +20,10 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	<meta name="google" value="notranslate">
 	<link rel="icon" type="image/png" href="/images/icon.png" />
-	<title>Sistema Universitario</title>  /*Cambio Realizado
-	<meta name="description" content="Sistema Universitario, gestión de asistencias." />  /*Cambio Realizado
+	<title>Sistema Universitario</title>
+	<!--Cambio-->
+	<meta name="description" content="Sistema Universitario, gestión de asistencias." />
+	<!--Cambio-->
 	<meta name="keywords" content="Sistema Universitario, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal, Gestión de Asistencias" />
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="css/pretty-checkbox.css" media="screen, projection" type="text/css" />
