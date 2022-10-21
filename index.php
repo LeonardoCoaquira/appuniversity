@@ -40,7 +40,7 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 	<div class="loader"></div>
 	<div class="wrap-title-login">
 		<div class="title-login">
-			<h1>Sistema Escolar</h1>
+			<h1>Sistema Universitario</h1>
 		</div>
 	</div>
 	<div class="form-login">
