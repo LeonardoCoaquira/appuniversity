@@ -30,7 +30,7 @@ if (strpos($url_actual, 'modules')) {
         $_SESSION['title_form_section'] = 'Grupos';
     } elseif ($name_page[1] == 'attendance') {
         $_SESSION['title_form_section'] = 'Asistencias';
-    } elseif ($name_page[1] == 'messages') {
+    } elseif ($name_page[1] == 'messenger') {
         $_SESSION['title_form_section'] = 'Mensajería';
     }
 
@@ -62,5 +62,4 @@ if (strpos($url_actual, 'modules')) {
     </span>
 </div>
 <div class="info-school-period">
-    <p>aqui va la mensajeria</p>
 </div>
