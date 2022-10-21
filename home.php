@@ -18,6 +18,8 @@ include_once 'modules/notif_info_unset.php';
     <link rel="icon" type="image/png" href="/images/icon.png" />
     <title>Sistema Escolar</title>
     <meta name="description" content="Sistema Universitario, gestión de asistencias." />
+    <title>Sistema Universitario</title>
+    <meta name="description" content="Sistema Universitario, gestión de asistencias." /> 
     <link rel="stylesheet" href="/css/style.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
     <script src="/js/external/jquery.min.js" type="text/javascript"></script>
     <script src="/js/external/prefixfree.min.js" type="text/javascript"></script>

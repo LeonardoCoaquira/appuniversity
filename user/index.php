@@ -27,7 +27,7 @@ if (!empty($_POST['btn'])) {
 	<meta name="google" value="notranslate">
 	<link rel="icon" type="image/png" href="/images/icon.png" />
 	<title>Usuarios | Sistema Escolar</title>
-	<meta name="description" content="Sistema Escolar, gestión de asistencias." />
+	<meta name="description" content="Sistema Universitario, gestión de asistencias." />
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo (rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/styleconfiguser.css" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="/css/croppie.css" media="screen, projection" type="text/css" />
