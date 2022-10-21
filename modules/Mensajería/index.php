@@ -76,5 +76,5 @@ include_once 'load_data.php';
 	</section>
 </body>
 <script src="/js/controls/buttons.js" type="text/javascript"></script>
-
+        <p>Mensaje a GitHub</p>
 </html>
