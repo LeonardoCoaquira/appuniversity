@@ -21,10 +21,8 @@ if (!empty($_SESSION['authenticate']) == 'go-' . !empty($_SESSION['usuario'])) {
 	<meta name="google" value="notranslate">
 	<link rel="icon" type="image/png" href="/images/icon.png" />
 	<title>Sistema Universitario</title>
-	<!--Cambio-->
 	<meta name="description" content="Sistema Universitario, gestión de asistencias." />
-	<!--Cambio-->
-	<meta name="keywords" content="Sistema Universitario, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal, Gestión de Asistencias" />
+	<meta name="keywords" content="Sistema Escolar, Asistencias, Alumnos, Docentes, Administrativos, Sistema de Asistencias, MySoftUP, Diego, Carmona, Bernal, Diego Carmona Bernal, Gestión de Asistencias" />
 	<link rel="stylesheet" href="/css/style.css?v=<?php echo(rand()); ?>" media="screen, projection" type="text/css" />
 	<link rel="stylesheet" href="css/pretty-checkbox.css" media="screen, projection" type="text/css" />
 	<script src="/js/external/jquery.min.js" type="text/javascript"></script>
