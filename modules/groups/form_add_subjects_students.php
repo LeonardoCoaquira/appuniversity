@@ -25,6 +25,9 @@ if (isset($_SESSION['school_period_group']) != '') {
 
 			$i += 1;
 		}
+	} else {
+		$_SESSION['subjects_group'][$i] = $row['subject'];
+		$_SESSION['subject_name_group'][$i] = $row['name'];
 	}
 }
 ?>
