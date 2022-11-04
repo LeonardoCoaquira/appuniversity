@@ -1,14 +1,3 @@
-/*-------------------------------------------
-  menumobile.js
-  By Diego Carmona Bernal - CBDX
-  www.diegocarmonabernal.com
-  www.mysoftup.com
--------------------------------------------*/
-
-/*-------------------------------------------
-  menu
--------------------------------------------*/
-
 let card = document.getElementById('activator');
 
 let tl = gsap.timeline({
