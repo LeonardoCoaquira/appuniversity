@@ -191,7 +191,7 @@ CREATE TABLE `students` (
   `gender` varchar(30) COLLATE utf8_spanish2_ci DEFAULT NULL,
   `curp` varchar(18) COLLATE utf8_spanish2_ci NOT NULL,
   `rfc` varchar(13) COLLATE utf8_spanish2_ci NOT NULL,
-  `phone` varchar(10) COLLATE utf8_spanish2_ci NOT NULL,
+  `phone` varchar(9) COLLATE utf8_spanish2_ci NOT NULL,
   `address` varchar(200) COLLATE utf8_spanish2_ci NOT NULL,
   `career` varchar(20) COLLATE utf8_spanish2_ci NOT NULL,
   `documentation` int(1) NOT NULL,
@@ -205,10 +205,10 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`user`, `name`, `surnames`, `date_of_birth`, `gender`, `curp`, `rfc`, `phone`, `address`, `career`, `documentation`, `admission_date`, `created_at`, `updated_at`) VALUES
-('stdt8ef8ba', 'Carlos Esteban', 'Robles Flores', NULL, NULL, 'CSJJSSIKJSKLSKOSKJ', 'JNDKJHJDLKJSL', '9651251012', 'Conocido', 'IEM', 0, '2021-10-08', '2022-04-03 17:52:52', NULL),
-('student_0beb9', 'Jesus', 'Ruiz Ruiz', NULL, NULL, 'PIJA0SKKS000022236', 'CONOCIDO', '2737283838', 'Conocido', 'IEM', 1, '2021-08-02', '2022-04-03 17:53:02', NULL),
-('student_28e64', 'María Juana', 'Pompeya Corzo', NULL, NULL, 'L02LSLSJLJKJ89994P', 'CONOCIDO', '9828782828', 'Conocido', 'IEM', 0, '2021-08-02', '2022-04-03 17:53:06', NULL),
-('student_f0404', 'Ricardo', 'Flores Magon', NULL, NULL, 'KKSKK99991P9199191', 'CONOCIDO', '272878328', 'Conocido', 'IEM', 1, '2021-08-02', '2022-04-03 17:53:11', NULL);
+('stdt8ef8ba', 'Carlos Esteban', 'Robles Flores', NULL, NULL, 'CSJJSSIKJSKLSKOSKJ', 'JNDKJHJDLKJSL', '965125112', 'Conocido', 'IEM', 0, '2021-10-08', '2022-04-03 17:52:52', NULL),
+('student_0beb9', 'Jesus', 'Ruiz Ruiz', NULL, NULL, 'PIJA0SKKS000022236', 'CONOCIDO', '273728338', 'Conocido', 'IEM', 1, '2021-08-02', '2022-04-03 17:53:02', NULL),
+('student_28e64', 'María Juana', 'Pompeya Corzo', NULL, NULL, 'L02LSLSJLJKJ89994P', 'CONOCIDO', '988782828', 'Conocido', 'IEM', 0, '2021-08-02', '2022-04-03 17:53:06', NULL),
+('student_f0404', 'Ricardo', 'Flores Magon', NULL, NULL, 'KKSKK99991P9199191', 'CONOCIDO', '27878328', 'Conocido', 'IEM', 1, '2021-08-02', '2022-04-03 17:53:11', NULL);
 
 -- --------------------------------------------------------
 
