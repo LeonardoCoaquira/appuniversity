@@ -15,7 +15,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 if (!empty($_POST['btn'])) {
 	$view_form = $_POST['btn'] . '.php';
 } else {
-	$view_form = 'form_default.php';
+	$view_form = 'form_student.php';
 }
 
 // Pagina actual
