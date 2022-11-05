@@ -1,11 +1,11 @@
 <?php
 require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php');
-$codigo = $_GET['user_id'];
+$codigo = $_GET['user'];
 
-$sentencia = $bd->prepare("SELECT msg.title_message, msg.content_message
-  FROM messages msg 
-  INNER JOIN persona per ON msg.codigo = pro.id_persona
-  WHERE pro.id_persona = ?;");
+$sentencia = $bd->prepare("SELECT msg.title_message, msg.content_message , msg.id_user, st.name , st.surnames,st.phone
+FROM messages msg 
+INNER JOIN students st ON st.user = msg.id_user
+WHERE msg.id_user  = ?;");
 $sentencia->execute([$codigo]);
 $persona = $sentencia->fetch(PDO::FETCH_OBJ);
 
@@ -16,12 +16,12 @@ $persona = $sentencia->fetch(PDO::FETCH_OBJ);
             "time" => '1654728819',
             "data" => [
                 "recipient" => [
-                    "id" => '51'.$persona->celular
+                    "id" => '51'.$persona->phone
                 ],
                 "message" => [[
                     "time" => '1654728819',
                     "type" => 'text',
-                    "value" => 'Estimado(a) *'.strtoupper($persona->nombres).' '.strtoupper($persona->apellido_paterno).' '.strtoupper($persona->apellido_materno).'* Por la presente queremos comunicarle: *'.strtoupper($persona->promocion).'*. Mensaje enviado a  *'.$persona->duracion.'*'
+                    "value" => 'Estimado(a) *'.strtoupper($persona->name).' '.strtoupper($persona->surname).'* Por la presente queremos comunicarle: *'.strtoupper($message->title_message).'*. Mensaje enviado a  *'.$message->content_message.'*'
                 ]]
             ]
         ]

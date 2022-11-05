@@ -22,7 +22,7 @@ require_once($_SESSION['raiz'] . '/modules/sections/role-access-admin-editor.php
 						<td>' . $_SESSION["student_name"][$i] . '</td>
 						<td>
 							<form action="" method="POST">
-								<button class="btndelete" name="btn" value="form_send" type="submit"></button>
+								<button class="btndelete" name="btn" value="form_default" type="submit"></button>
 							</form>
 						</td>
 					</tr>
