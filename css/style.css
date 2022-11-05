@@ -177,12 +177,12 @@ body.login {
     float: right;
     width: 26.7%;
     height: 100%;
-    border-left: 1px solid #282a3660;
+    border-left: 1px solid #ff5733;
 }
 
 .info-school-period .school-period {
     display: block;
-    color: #eef4ff;
+    color: #ff5733;
     text-shadow: 0 1px 5px rgba(142, 136, 192, 0.2);
     font-size: 0.9em;
     font-weight: 500;
